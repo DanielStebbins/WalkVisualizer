@@ -1,0 +1,12 @@
+#graph {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(10, 50px);
+}
+
+.box {
+    background-color: #fff;
+    color: #fff;
+    margin-top: -5px;
+    margin-left: -5px;
+}
