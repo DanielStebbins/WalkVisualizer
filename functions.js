@@ -58,6 +58,18 @@ function drawWalk(walk, color, size) {
     let y = 0;
     let xStep = 1;
     let yStep = 1;
+
+    if(walk.includes("0") || walk.includes("1")) {
+        // Reverse the order (assumes 01010101 is read right to left, flip if that's been changed)
+        walk = walk.split("").reverse().join("");
+
+        // Change from 01 format to HV format.
+        walk = walk.replaceAll("0", "H");
+        walk = walk.replaceAll("1", "V");
+    }
+
+    console.log(walk);
+
     for(const char of walk) {
         if(char == "H") {
             let newX = x + xStep;
